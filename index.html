@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry, Chuiimuii ♡</title>
+<style>
+:root {
+  --wine: #702c46;
+  --rose: #c77d98;
+  --lavender: #b7a1d6;
+  --cream: #fff8f5;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #603b4d;
+  font-family: Georgia, "Times New Roman", serif;
+  background: linear-gradient(145deg, #fff0f3, #eee5fa, #fce9ed);
+  overflow-x: hidden;
+}
+.petal {
+  position: fixed;
+  top: -30px;
+  color: #c56e91;
+  opacity: .55;
+  pointer-events: none;
+  z-index: 0;
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  to { transform: translateY(110vh) rotate(480deg); }
+}
+main {
+  position: relative;
+  z-index: 1;
+  width: min(92%, 650px);
+  margin: auto;
+  padding: 60px 0 45px;
+  text-align: center;
+}
+.eyebrow {
+  letter-spacing: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #93657e;
+}
+h1 {
+  font-size: clamp(38px, 9vw, 64px);
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 20px 0 12px;
+  color: var(--wine);
+}
+.subtitle {
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 440px;
+  margin: 0 auto;
+}
+.heart {
+  font-size: 35px;
+  margin: 22px 0;
+  color: #b95678;
+  animation: heartbeat 1.7s infinite;
+}
+@keyframes heartbeat {
+  50% { transform: scale(1.13); }
+}
+.envelope-wrap { margin: 25px 0; }
+.envelope {
+  border: 1px solid #d7b5c7;
+  border-radius: 16px;
+  background: rgba(255,255,255,.6);
+  padding: 23px 28px;
+  color: var(--wine);
+  font-family: inherit;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0 12px 35px #85506c17;
+  transition: transform .3s, background .3s;
+}
+.envelope:hover { transform: translateY(-4px); background: white; }
+.envelope span { display: block; font-size: 36px; margin-bottom: 8px; }
+.letter {
+  display: none;
+  text-align: left;
+  background: rgba(255,253,250,.88);
+  border: 1px solid #ead6e0;
+  border-radius: 20px;
+  padding: clamp(22px, 6vw, 38px);
+  margin: 25px 0;
+  box-shadow: 0 15px 50px #76455b14;
+  animation: reveal .8s ease both;
+}
+.letter.show { display: block; }
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.letter h2 {
+  font-weight: normal;
+  color: var(--wine);
+  text-align: center;
+  font-size: 29px;
+}
+.letter p {
+  font-size: 16px;
+  line-height: 1.95;
+  margin: 17px 0;
+}
+.promise-title {
+  font-size: 29px;
+  font-weight: normal;
+  color: var(--wine);
+  margin-top: 48px;
+}
+.promise {
+  text-align: left;
+  padding: 19px 20px;
+  margin: 12px 0;
+  background: #ffffff82;
+  border: 1px solid #e8d4e2;
+  border-radius: 14px;
+  line-height: 1.8;
+}
+.promise b { color: var(--wine); }
+.closing {
+  margin: 45px 0 20px;
+  font-size: 21px;
+  line-height: 1.8;
+}
+.signature { color: var(--wine); font-size: 25px; }
+footer {
+  font-family: Arial, sans-serif;
+  color: #987d90;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-top: 35px;
+}
+button:focus-visible {
+  outline: 3px solid #a65e83;
+  outline-offset: 4px;
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">A little letter from my heart</div>
+  <h1>I'm Sorry,<br>Chuiimuii</h1>
+  <p class="subtitle">
+    Kuch baatein dil mein reh jaati hain,<br>
+    aur kuch galtiyan humein aur behtar banna sikhati hain.
+  </p>
+  <div class="heart">♡</div>
+
+  <div class="envelope-wrap">
+    <button class="envelope" id="openLetter"
+      aria-expanded="false" aria-controls="letter">
+      <span>💌</span>
+      A letter, just for you
+      <br><small>Tap to open gently</small>
+    </button>
+  </div>
+
+  <article class="letter" id="letter">
+    <h2>Meri Chuiimuii,</h2>
+
+    <p>
+      Sooriiii yaarrr, meri pyaari Chuiimuii.
+      Aapne mujh par trust karke woh sab share kiya tha,
+      aur aap deserve karti thi ki mere saath aapko safe
+      aur understood feel ho — judged nahi. 😔
+    </p>
+
+    <p>
+      Aapne mujhse apni baatein share ki, kyunki aapne
+      mujh par bharosa kiya. Main kabhi nahi chahta ki
+      aapko lage ki apni feelings ya apni personal baatein
+      mere saath share karna galat tha. Aapko apni baaton
+      ke liye sorry feel karne ki zaroorat nahi hai.
+    </p>
+
+    <p>
+      Agar meri kisi baat ya reaction se aapko hurt hua,
+      uncomfortable feel hua, ya laga ki main aapko judge
+      kar raha hoon, toh I'm genuinely sorry. Main aapki
+      feelings ko dismiss nahi karna chahta aur na hi
+      apni intention ka bahaana dekar aapke hurt ko chhota
+      dikhana chahta hoon.
+    </p>
+
+    <p>
+      Main chahta hoon ki aap mere saamne apni real self
+      reh sakein — bina yeh soche ki main kya sochunga,
+      bina apni baatein chhupane ke pressure ke. Aapko
+      har baat explain karne, defend karne ya perfect
+      dikhne ki zaroorat nahi hai.
+    </p>
+
+    <p>
+      Mujhe pata hai ki sirf sorry bol dene se trust
+      automatically theek nahi hota. Trust ko actions
+      se earn karna padta hai. Isliye main sirf aapse
+      mujhe maaf karne ko nahi keh raha. Main chahta hoon
+      ki aage mere behaviour se aapko feel ho ki main
+      aapki baat sunta hoon, aapki boundaries respect
+      karta hoon aur aapki feelings ko seriously leta hoon.
+    </p>
+
+    <p>
+      Aapko abhi turant theek feel karne ya mujhe
+      reassure karne ki zaroorat nahi hai. Agar aapko
+      time chahiye, toh main uski respect karunga.
+      Main aapki baat sunna chahta hoon, bina interrupt
+      kiye aur bina khud ko defend karne ki jaldi kiye.
+    </p>
+
+    <p>
+      I'm sorry, meri jaan. Aapka trust mere liye important
+      hai, aur main apni galti se seekhkar aapke liye
+      ek better, safer person banna chahta hoon.
+    </p>
+
+    <p style="text-align:center;color:#a44e75;font-size:21px">
+      Aapki feelings matter karti hain. Always. ♡
+    </p>
+
+    <p style="text-align:right">
+      Hamesha aapka,<br>
+      <strong>Sundruu</strong>
+    </p>
+  </article>
+
+  <h2 class="promise-title">What I want to do better</h2>
+  <p class="subtitle">Sirf words nahi, meri actions bhi.</p>
+
+  <div class="promise">
+    <b>♡ 01 — Listen first.</b><br>
+    Aapki baat poori sununga, bina jaldi conclusion
+    nikale aur bina turant defend kiye.
+  </div>
+  <div class="promise">
+    <b>♡ 02 — Respect your trust.</b><br>
+    Aapki personal baaton ko respect aur care ke saath
+    handle karunga.
+  </div>
+  <div class="promise">
+    <b>♡ 03 — Understand, don't judge.</b><br>
+    Aapki feelings ko samajhne ki koshish karunga,
+    chahe mujhe unhe samajhne mein waqt lage.
+  </div>
+  <div class="promise">
+    <b>♡ 04 — Prove it through actions.</b><br>
+    Sirf sorry kehkar baat khatam nahi karunga.
+    Apne behaviour par kaam karunga.
+  </div>
+
+  <div class="closing">
+    Main perfect nahi hoon, par apni galti ko samajhna
+    aur usse behtar banna meri responsibility hai.
+    <div class="heart">♡</div>
+    <div class="signature">I love you, Chuiimuii.</div>
+    <small>— Your Sundruu</small>
+  </div>
+
+  <footer>MADE WITH CARE · JUST FOR YOU</footer>
+</main>
+
+<script>
+const button = document.getElementById("openLetter");
+const letter = document.getElementById("letter");
+
+button.addEventListener("click", () => {
+  const isOpen = letter.classList.toggle("show");
+  button.setAttribute("aria-expanded", String(isOpen));
+  button.innerHTML = isOpen
+    ? "<span>💗</span>Your letter is open"
+    : "<span>💌</span>A letter, just for you<br><small>Tap to open gently</small>";
+
+  if (isOpen) {
+    setTimeout(() => {
+      letter.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+  }
+});
+
+for (let i = 0; i < 18; i++) {
+  const petal = document.createElement("span");
+  petal.className = "petal";
+  petal.textContent = ["♡", "✿", "♥"][i % 3];
+  petal.style.left = Math.random() * 100 + "vw";
+  petal.style.animationDuration = (9 + Math.random() * 13) + "s";
+  petal.style.animationDelay = (-Math.random() * 20) + "s";
+  petal.style.fontSize = (12 + Math.random() * 13) + "px";
+  document.body.appendChild(petal);
+}
+</script>
+</body>
+</html>
